@@ -13,13 +13,9 @@ X_poly = zeros(numel(X), p);
 % Instructions: Given a vector X, return a matrix X_poly where the p-th 
 %               column of X contains the values of X to the p-th power.
 %
-% 
-
-
-
-
-
-
+%
+exponents = 1:p;
+X_poly = X .^ exponents;
 % =========================================================================
 
 end
