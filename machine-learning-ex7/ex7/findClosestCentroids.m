@@ -20,7 +20,14 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
-
+tmp_index = zeros(size(X,1),K);
+for i=1:size(X,1),
+  for j=1:K,
+    tmp_index(i,j) = sum((X(i,:) - centroids(j,:)).^2);
+  end;
+end;
+tmp = [];
+[tmp, idx] = min(tmp_index,[],2);
 
 
 
